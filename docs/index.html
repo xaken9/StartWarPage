@@ -98,7 +98,7 @@
 <body>
     <div id="starwarship">
         <div class="container">
-            <table class="table">
+            <table class="table table-striped table-hover">
                 <thead>
                     <tr>
                         <th>Model</th>
@@ -109,7 +109,7 @@
                 </thead>
                 <tbody>
                     <tr v-for="swship in swships">
-                        <td>{{swship.model}}</td>
+                        <td >{{swship.model}}</td>
                         <td>{{swship.manufacturer}}</td>
                         <td><input v-bind:id="'txtCrew_'+swship.id" type="number" min="1" v-on:blur="updateswships(swship.id)" :value="swship.crew" /></td>
                         <td>{{swship.lastmodifieddate | formatdatetime}}</td>
